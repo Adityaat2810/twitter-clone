@@ -6,6 +6,8 @@ import FeedCard from "@/components/FeedCard";
 import { FaMoneyCheckAlt } from "react-icons/fa";
 import { RiMoneyDollarBoxLine } from "react-icons/ri";
 import { SlOptions } from "react-icons/sl";
+import { GoogleLogin } from "@react-oauth/google";
+import GoogleLoginButton from "@/components/GoogleLoginBitton";
 
 
 const inter =Inter({subsets:['latin']})
@@ -106,7 +108,12 @@ export default function Home() {
           <FeedCard/>
 
         </div>
-        <div className="col-span-3"> </div>
+        <div className="col-span-3 p-5">
+          <div className="p-5  bg-slate-700 rounded-lg ">
+            <h1 className="my-2">New to Twitter ?</h1>
+            <GoogleLoginButton />
+          </div>
+        </div>
 
 
       </div>
