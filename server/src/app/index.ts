@@ -4,11 +4,16 @@ import { expressMiddleware } from '@apollo/server/express4'
 import bodyParser from "body-parser";
 import { prismaClient } from "../client/db";
 import { User} from './user'
+const cors = require('cors')
+
+const app = express()
+
 
 export async function initServer(){
     const app = express()
 
     app.use(bodyParser.json())
+    app.use(cors())
     // prismaClient.user.create({
 
     // }) 
